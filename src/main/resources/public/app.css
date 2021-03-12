@@ -1,0 +1,28 @@
+/* 例：修改登录页背景图 */
+layout-passport > .container{
+    background-position:center !important;
+    background-repeat:repeat !important;
+    background-size: cover !important;
+    background-image:url(./login-img.png) !important;
+}
+
+layout-passport .title {
+    font-family: Courier New, Menlo, Monaco, Consolas, monospace !important;
+}
+
+/* 例：调整顶栏颜色 */
+.alain-default__header {
+    background: #77d2ff
+}
+
+.global-footer__copyright{
+    display: none;
+}
+
+body > app-root > layout-default > layout-header > div.alain-default__header-logo > a{
+    display: none;
+}
+
+body > app-root > layout-passport > div > div > div > div.head {
+    display: none;
+}
