@@ -1,11 +1,16 @@
 package cn.chaojibus.server.model;
 
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.*;
 
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.sub_field.Edit;
+import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
+import xyz.erupt.annotation.sub_field.sub_edit.ReferenceTableType;
 
 
 /**
@@ -104,76 +109,6 @@ public class Enterprise {
         this.enterpriseAdminId = enterpriseAdminId;
     }
 
-    // public String getLegalPerson() {
-    //     return legalPerson;
-    // }
 
-    // public void setLegalPerson(String legalPerson) {
-    //     this.legalPerson = legalPerson;
-    // }
-
-    // public String getAddress() {
-    //     return address;
-    // }
-
-    // public void setAddress(String address) {
-    //     this.address = address;
-    // }
-
-    // public String getCooperationStatus() {
-    //     return cooperationStatus;
-    // }
-
-    // public void setCooperationStatus(String cooperationStatus) {
-    //     this.cooperationStatus = cooperationStatus;
-    // }
-
-    // public String getIndustry() {
-    //     return industry;
-    // }
-
-    // public void setIndustry(String industry) {
-    //     this.industry = industry;
-    // }
-
-    // public Integer getCreditRating() {
-    //     return creditRating;
-    // }
-
-    // public void setCreditRating(Integer creditRating) {
-    //     this.creditRating = creditRating;
-    // }
-
-    // public String getIndustrialAndCommercialCreditCode() {
-    //     return industrialAndCommercialCreditCode;
-    // }
-
-    // public void setIndustrialAndCommercialCreditCode(String industrialAndCommercialCreditCode) {
-    //     this.industrialAndCommercialCreditCode = industrialAndCommercialCreditCode;
-    // }
-
-    // public String getOpeningBank() {
-    //     return openingBank;
-    // }
-
-    // public void setOpeningBank(String openingBank) {
-    //     this.openingBank = openingBank;
-    // }
-
-    // public String getBankAccountNumber() {
-    //     return bankAccountNumber;
-    // }
-
-    // public void setBankAccountNumber(String bankAccountNumber) {
-    //     this.bankAccountNumber = bankAccountNumber;
-    // }
-
-    // public String getBusinessLicense() {
-    //     return businessLicense;
-    // }
-
-    // public void setBusinessLicense(String businessLicense) {
-    //     this.businessLicense = businessLicense;
-    // }
 
 }

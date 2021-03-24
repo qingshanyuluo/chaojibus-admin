@@ -6,7 +6,10 @@ import org.hibernate.annotations.GenericGenerator;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.sub_field.Edit;
+import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
+import xyz.erupt.annotation.sub_field.ViewType;
+import xyz.erupt.annotation.sub_field.sub_edit.ReferenceTableType;
 
 @Entity
 @Erupt(name = "司机")
@@ -35,84 +38,15 @@ public class Driver {
     @EruptField(views = @View(title = "密码"), edit = @Edit(title = "密码"))
     private String password;
 
-    @EruptField(views = @View(title = "1可用，0不可用"), edit = @Edit(title = "1可用，0不可用"))
+    @EruptField(views = @View(title = "状态（1可用，0不可用）"), edit = @Edit(title = "1可用，0不可用"))
     private Integer status;// 1可用，0不可用
 
-    @EruptField(views = @View(title = "车牌号"), edit = @Edit(title = "车牌号"))
-    private Long busId;// 车牌号
+    @EruptField(
+                views = @View(title = "车辆", column = "cph" ),
+                edit = @Edit(title = "车辆", type = EditType.REFERENCE_TABLE,
+                             referenceTableType = @ReferenceTableType(id= "id", label = "cph")    )
+    )
+    @OneToOne()
+    private Bus bus;// 车牌号
 
-    @EruptField(views = @View(title = "0为女 1 为男"), edit = @Edit(title = "0为女 1 为男"))
-    private Integer gender; // 0为女 1 为男
-
-    public String getIdNumber() {
-        return idNumber;
-    }
-
-    public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public Long getBusId() {
-        return busId;
-    }
-
-    public void setBusId(Long busId) {
-        this.busId = busId;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Integer getGender() {
-        return gender;
-    }
-
-    public void setGender(Integer gender) {
-        this.gender = gender;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 }

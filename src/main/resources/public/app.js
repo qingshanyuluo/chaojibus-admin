@@ -9,7 +9,7 @@ window.eruptSiteConfig = {
     //描述
     desc: "通用数据管理框架",
     //高德地图api key,使用地图组件须指定此属性，amapKey获取地址：https://lbs.amap.com
-    amapKey: "6ba79a8d6ba79a8d",
+    amapKey: "f1dc11e64195e020b576456694fd6c3b",
     //logo路径
     logoPath: "erupt.svg",
     //logo文字

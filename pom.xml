@@ -46,7 +46,6 @@
 		<artifactId>erupt-upms</artifactId>
 		<version>${erupt.version}</version>
 		</dependency>
-		<!--接口数据安全-->
 		<dependency>
 		<groupId>xyz.erupt</groupId>
 		<artifactId>erupt-security</artifactId>
@@ -70,7 +69,13 @@
 
 		
 
-	</dependencies>
+	
+   <dependency>
+     <groupId>xyz.erupt</groupId>
+     <artifactId>erupt-annotation</artifactId>
+     <version>1.6.7</version>
+   </dependency>
+ </dependencies>
 
 	<build>
 		<plugins>
