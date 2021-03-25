@@ -13,6 +13,7 @@ import xyz.erupt.annotation.sub_erupt.Power;
 import xyz.erupt.annotation.sub_field.Edit;
 import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
+import xyz.erupt.annotation.sub_field.sub_edit.DateType;
 import xyz.erupt.annotation.sub_field.sub_edit.ReferenceTableType;
 
 @Entity
@@ -94,7 +95,7 @@ public class EOrder {
     
     @EruptField(
         views = @View(title = "出发时间"),
-        edit = @Edit(title = "出发时间")
+        edit = @Edit(title = "出发时间", type = EditType.DATE, dateType = @DateType(type = DateType.Type.DATE_TIME))
     )
     private Date date;
 
@@ -103,6 +104,12 @@ public class EOrder {
         edit = @Edit(title = "金额")
     )
     private Integer money;
+
+    @EruptField(
+        views = @View(title = "金额说明"),
+        edit = @Edit(title = "金额说明")
+    )
+    private String moneyCommit;
     
     @EruptField(
         views = @View(title = "是否完成"),

@@ -46,6 +46,7 @@ public class User {
     private String password;
 
     private String salt;
+    
 
     @EruptField(views = @View(title = "是否为企业负责人"), edit = @Edit(title = "是否为企业负责人"))
     private Boolean type; // 0为管理员 1 为普通用户

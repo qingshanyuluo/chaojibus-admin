@@ -11,7 +11,9 @@ import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.sub_erupt.Power;
 import xyz.erupt.annotation.sub_field.Edit;
+import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
+import xyz.erupt.annotation.sub_field.sub_edit.DateType;
 
 @Entity
 @Table(name = "t_rorder")
@@ -36,7 +38,7 @@ public class RegulerOrder {
     @ManyToOne
     private Line line;
 
-    @EruptField(views = @View(title = "时间"))
+    @EruptField(views = @View(title = "时间"), edit = @Edit(title = "时间", type = EditType.DATE, dateType = @DateType(type = DateType.Type.DATE_TIME)))
     private Date date;
 
     @EruptField(views = @View(title = "所属企业", column = "name"))

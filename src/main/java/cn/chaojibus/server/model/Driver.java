@@ -49,4 +49,20 @@ public class Driver {
     @OneToOne()
     private Bus bus;// 车牌号
 
+    @EruptField(
+        views = @View(title = "分配班车路线", column = "value"),
+        edit = @Edit(title = "分配司机", type = EditType.REFERENCE_TABLE,
+                    referenceTableType = @ReferenceTableType(id = "id", label = "value"))
+    )
+    @OneToOne
+    private Line line;
+
+    @EruptField(
+        views = @View(title = "分配的企业订单", column = "end"),
+        edit = @Edit(title = "分配的企业订单", type = EditType.REFERENCE_TABLE,
+                    referenceTableType = @ReferenceTableType(id = "id", label = "end"))
+    )
+    @OneToOne
+    private EOrder eOrder;
+
 }

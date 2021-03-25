@@ -82,32 +82,13 @@ public class Enterprise {
         edit = @Edit(title = "营业执照")
     )
     private String businessLicense;//营业执照
+    @EruptField(
+        views = @View(title = "企业余额"),
+        edit = @Edit(title = "企业余额")
+    )
+    private Integer money;//营业执照
     
-    private Long enterpriseAdminId;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getEnterpriseAdminId() {
-        return enterpriseAdminId;
-    }
-
-    public void setEnterpriseAdminId(Long enterpriseAdminId) {
-        this.enterpriseAdminId = enterpriseAdminId;
-    }
+    // private Long enterpriseAdminId;
 
 
 

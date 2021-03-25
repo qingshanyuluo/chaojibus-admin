@@ -43,13 +43,6 @@ public class Line {
     @ManyToOne
     private Enterprise enterprise;
 
-    @EruptField(
-        views = @View(title = "分配司机", column = "name"),
-        edit = @Edit(title = "分配司机", type = EditType.REFERENCE_TABLE,
-                    referenceTableType = @ReferenceTableType(id = "id", label = "name"))
-    )
-    @OneToOne
-    private Driver driver;
 
     @EruptField(
         views = @View(title = "开始时间"),
