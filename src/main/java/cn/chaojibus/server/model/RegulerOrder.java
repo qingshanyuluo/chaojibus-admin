@@ -18,8 +18,8 @@ import xyz.erupt.annotation.sub_field.sub_edit.DateType;
 @Entity
 @Table(name = "t_rorder")
 @Erupt(name = "班车订单",
-power = @Power(add = true, delete = false, 
-                      edit = true, query = true, 
+power = @Power(add = false, delete = false, 
+                      edit = false, query = true, 
                       importable = false, export = true))
 public class RegulerOrder {
     

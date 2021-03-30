@@ -12,7 +12,7 @@ import xyz.erupt.annotation.sub_field.sub_edit.TagsType;
 import javax.persistence.*;
 
 @Erupt(name = "客户",
-power = @Power(add = true, delete = false, 
+power = @Power(add = false, delete = false, 
                       edit = true, query = true, 
                       importable = false, export = true))
 @Entity

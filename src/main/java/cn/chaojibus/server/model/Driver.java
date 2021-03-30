@@ -64,6 +64,6 @@ public class Driver {
                     referenceTableType = @ReferenceTableType(id = "id", label = "end"))
     )
     @OneToOne
-    private EOrder eOrder;
+    private EOrder order;
 
 }
