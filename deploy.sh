@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mvn clean package
+#./mvnw clean package
 
 host="mrbus.net"
 username="root"

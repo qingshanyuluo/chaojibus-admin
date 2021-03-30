@@ -30,10 +30,29 @@ public class Line {
     private Long id;
 
     @EruptField(
+            views = @View(title = "订单编号"),
+            edit = @Edit(title = "订单编号")
+    )
+    private String uid;
+
+    @EruptField(
+            views = @View(title = "发车时间"),
+            edit = @Edit(title = "发车时间")
+    )
+    private String time;
+
+    @EruptField(
         views = @View(title = "线路详情"),
         edit = @Edit(title = "线路详情")
     )
     private String value;
+
+    @EruptField(
+            views = @View(title = "负责司机"),
+            edit = @Edit(title = "负责司机")
+    )
+    @OneToOne
+    private Driver driver;
 
     @EruptField(
         views = @View(title = "所属企业", column = "name"),
@@ -45,14 +64,14 @@ public class Line {
 
 
     @EruptField(
-        views = @View(title = "开始时间"),
-        edit = @Edit(title = "开始时间")
+        views = @View(title = "合约开始时间"),
+        edit = @Edit(title = "合约开始时间")
     )
     private String startTime;
     
     @EruptField(
-        views = @View(title = "结束时间"),
-        edit = @Edit(title = "结束时间")
+        views = @View(title = "合约结束时间"),
+        edit = @Edit(title = "合约结束时间")
     )
     private String endTime;
     

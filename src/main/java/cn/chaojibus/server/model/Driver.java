@@ -5,6 +5,7 @@ import javax.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
+import xyz.erupt.annotation.sub_erupt.Power;
 import xyz.erupt.annotation.sub_field.Edit;
 import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
@@ -12,7 +13,7 @@ import xyz.erupt.annotation.sub_field.ViewType;
 import xyz.erupt.annotation.sub_field.sub_edit.ReferenceTableType;
 
 @Entity
-@Erupt(name = "司机")
+@Erupt(name = "司机", power = @Power(add = true, delete = false, edit = true, query = true, importable = false, export = true))
 @Table(name = "t_driver")
 public class Driver {
 
@@ -49,13 +50,13 @@ public class Driver {
     @OneToOne()
     private Bus bus;// 车牌号
 
-    @EruptField(
-        views = @View(title = "分配班车路线", column = "value"),
-        edit = @Edit(title = "分配司机", type = EditType.REFERENCE_TABLE,
-                    referenceTableType = @ReferenceTableType(id = "id", label = "value"))
-    )
-    @OneToOne
-    private Line line;
+//    @EruptField(
+//        views = @View(title = "分配班车路线", column = "value"),
+//        edit = @Edit(title = "分配司机", type = EditType.REFERENCE_TABLE,
+//                    referenceTableType = @ReferenceTableType(id = "id", label = "value"))
+//    )
+//    @OneToOne
+//    private Line line;
 
     @EruptField(
         views = @View(title = "分配的企业订单", column = "end"),

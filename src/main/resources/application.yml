@@ -3,11 +3,11 @@ erupt-app:
   verifyCodeCount: 2
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/busd?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    # username: dev
-    username: admin
-    # password: 123456
-    password: root
+    url: jdbc:mysql://mrbus.net:3306/busd?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: dev
+#    username: admin
+    password: 123456
+#    password: root
     hikari:
       timeout: 60000
       maximum-pool-size: 30

@@ -39,11 +39,9 @@ public class EOrder {
     @ManyToOne
     private User admin;
 
-    @EruptField(views = @View(title = "分配的司机", column = "name"),
-                edit = @Edit(title = "分配的司机", type = EditType.REFERENCE_TABLE,
-                            referenceTableType = @ReferenceTableType(id = "id", label = "name")))
-    @ManyToOne
-    private Driver driver;
+    @EruptField(views = @View(title = "分配的司机"),
+                edit = @Edit(title = "分配的司机"))
+    private String driver;
 
     @EruptField(
         views = @View(title = "人数"),
