@@ -48,8 +48,9 @@ public class Line {
     private String value;
 
     @EruptField(
-            views = @View(title = "负责司机"),
-            edit = @Edit(title = "负责司机")
+            views = @View(title = "负责司机", column = "name"),
+            edit = @Edit(title = "负责司机", type = EditType.REFERENCE_TABLE,
+                        referenceTableType = @ReferenceTableType(id = "id", label = "name"))
     )
     @OneToOne
     private Driver driver;
